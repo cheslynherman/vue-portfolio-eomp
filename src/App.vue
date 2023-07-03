@@ -1,18 +1,32 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  <NavBarComp />
+  <router-view />
+  <FooterComp/>
 </template>
 
+<script>
+import NavBarComp from "@/components/NavBar-comp.vue";
+import FooterComp from "@/components/Footer-comp.vue";
+export default {
+  components: {
+    NavBarComp,
+    FooterComp
+  },
+};
+</script>
+
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap");
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: 'Chakra Petch', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+
+body {
+  background-color: #ede4e0;
 }
 
 nav {
