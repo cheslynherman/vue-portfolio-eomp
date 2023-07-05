@@ -12,7 +12,7 @@
   <div class="container-fluid m-auto" id="bio">
     <h3>Bio</h3>
     <p>
-      I am an aspiring web developer. I am someone who is disciplined,
+      I am an aspiring web developer, web designer and frontend developer. I am someone who is disciplined,
       hardworking and goal driven. My willingness to learn allows me to
       constantly seek new challenges and I can adapt to any environment. I work
       efficiently and effectively both within a team as well as individually.
