@@ -4,6 +4,8 @@ export default createStore({
   state: {
     projects: null,
     testimonials: null,
+    education: null,
+    experience: null,
   },
   mutations: {
     setProjects: (state, value) => {
@@ -11,6 +13,12 @@ export default createStore({
     },
     setTestimonials: (state, value) => {
       state.testimonials = value;
+    },
+    setEducation: (state, value) => {
+      state.education = value;
+    },
+    setExperience: (state, value) => {
+      state.experience = value;
     },
   },
   actions: {
@@ -44,5 +52,33 @@ export default createStore({
       }
 
     },
+    async fetchEducation (context) {
+      try {
+        let {education} = await (
+          await fetch("https://cheslynherman.github.io/data/vueProject.json")
+        ).json();
+        if (education) {
+          context.commit("setEducation", education);
+        } else {
+          alert ("ERROR");
+        }
+      } catch (e) {
+        console.error(error);
+      }
+    },
+    async fetchExperience (context) {
+      try {
+        let {experience} = await (
+          await fetch("https://cheslynherman.github.io/data/vueProject.json")
+        ).json();
+        if (experience) {
+          context.commit("setExperience", experience);
+        } else {
+          alert ("ERROR");
+        }
+      } catch (e) {
+        console.error(error);
+      }
+    }
   },
 });
