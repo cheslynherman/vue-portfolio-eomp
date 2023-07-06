@@ -2,7 +2,7 @@
   <body>
     <h3 class="m-3">Resum&eacute;</h3>
 
-    <div class="container-fluid">
+    <div class="container-fluid mb-3">
       <h5>Personal Information</h5>
 
       <p>Date of Birth: 27 April 2000</p>
@@ -45,7 +45,7 @@
       </div>
     </div>
 
-    <div class="skillSection container-fluid">
+    <div class="skillSection container-fluid mt-3">
       <div>
         <h3>Soft Skills</h3>
       </div>
@@ -131,6 +131,41 @@
           ></div>
         </div>
       </div>
+      <div class="mt-3">
+        <div><h3>Technical Skils</h3></div>
+        <div>
+          <img
+            class="skill-imgs"
+            src="https://i.postimg.cc/KYk7cQ03/icons8-css-150.png"
+            alt="CSS"
+          />
+          <img
+            class="skill-imgs"
+            src="https://i.postimg.cc/prxKZvRK/icons8-github-150-2.png"
+            alt="GitHub"
+          />
+          <img
+            class="skill-imgs"
+            src="https://i.postimg.cc/fbGcVXP2/icons8-bootstrap-a-free-and-open-source-css-framework-96.png"
+            alt="Bootstrap"
+          />
+          <img
+            class="skill-imgs"
+            src="https://i.postimg.cc/vB5WfTFQ/icons8-javascript-128.png"
+            alt="JavaScript"
+          />
+          <img
+            class="skill-imgs"
+            src="https://i.postimg.cc/fRbjpMXK/icons8-vue-js-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-appli.png"
+            alt="Vue"
+          />
+          <img
+            class="skill-imgs"
+            src="https://i.postimg.cc/Tw93zLZN/icons8-html-150-2.png"
+            alt="HTML"
+          />
+        </div>
+      </div>
     </div>
   </body>
 </template>
@@ -153,12 +188,24 @@ export default {
 </script>
 
 <style scoped>
-
+body {
+  font-family: "Chakra Petch", sans-serif;
+  color: #3C2A21;
+}
 .skillsSection {
-    margin-bottom: 20px;
-    margin-top: 20px !important;
+  margin-bottom: 20px;
+  margin-top: 20px !important;
 }
 .skills {
-    width: 90%;
+  width: 90%;
+}
+
+.skill-imgs {
+  height: 150px;
+  margin: 20px;
+}
+.progress-bar {
+    background-color: #3C2A21;
+    color: #3C2A21 !important;
 }
 </style>
