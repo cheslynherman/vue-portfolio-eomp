@@ -1,4 +1,4 @@
-import { createStore } from 'vuex'
+import { createStore } from "vuex";
 
 export default createStore({
   state: {
@@ -6,23 +6,43 @@ export default createStore({
     testimonials: null,
   },
   mutations: {
-    setProjects: (state, projects) => {
-      state.projects = projects
+    setProjects: (state, value) => {
+      state.projects = value;
     },
-    setTestimonials: (state, testimonials) => {
-      state.testimonials = testimonials
+    setTestimonials: (state, value) => {
+      state.testimonials = value;
     },
   },
   actions: {
-    getProjects: async (context) => {
-      fetch ("https://cheslynherman.github.io/data/projects.json")
-      .then ((res) => res.json())
-      .then ((projects) => context.commit("setProjects", projects))
+    async fetchProjects(context){
+      try {
+        let { projects } = await (
+          await fetch("https://cheslynherman.github.io/data/vueProject.json")
+        ).json();
+        if (projects) {
+          context.commit("setProjects", projects);
+        } else {
+          alert("ERROR");
+        }
+      } catch (e) {
+        console.error(error);
+      }
+
     },
-    getTestimonials: async (context) => {
-      fetch ("https://cheslynherman.github.io/data/testimonials.json")
-      .then ((res) => res.json())
-      .then ((testimonials) => context.commit("setTestimonials", testimonials))
+    async fetchTestimonials(context) {
+      try {
+        let { testimonials } = await (
+          await fetch("https://cheslynherman.github.io/data/vueProject.json")
+        ).json();
+        if (testimonials) {
+          context.commit("setTestimonials", testimonials);
+        } else {
+          alert("ERROR");
+        }
+      } catch (e) {
+        console.error(error);
+      }
+
     },
   },
-})
+});
