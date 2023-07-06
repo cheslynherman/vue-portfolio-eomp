@@ -22,12 +22,8 @@
             <div class="card__content">
               <h3>{{ educ.institution }}</h3>
               <br />
-              <p class="card__description">
-               Duration: {{ educ.duration }}
-              </p>
-              <p>
-                Qualification: {{ educ.qualification }}
-              </p>
+              <p class="card__description">Duration: {{ educ.duration }}</p>
+              <p>Qualification: {{ educ.qualification }}</p>
             </div>
           </div>
         </div>
@@ -36,24 +32,103 @@
         <div><h3>Experience</h3></div>
         <div v-for="exp in experience" :key="exp.id" :exp="exp">
           <div class="card">
-            <img
-              :src="exp.image_url"
-              :alt="exp.company"
-            />
+            <img :src="exp.image_url" :alt="exp.company" />
             <div class="card__content">
               <h3>{{ exp.company }}</h3>
               <br />
-              <p class="card__description">
-                Duration: {{ exp.duration }}
-              </p>
-              <p>
-                Position: {{ exp.position }}
-              </p>
-              <p>
-                Duties: {{ exp.duties }}
-              </p>
+              <p class="card__description">Duration: {{ exp.duration }}</p>
+              <p>Position: {{ exp.position }}</p>
+              <p>Duties: {{ exp.duties }}</p>
             </div>
           </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="skillSection container-fluid">
+      <div>
+        <h3>Soft Skills</h3>
+      </div>
+      <div class="skills m-auto">
+        <label for="progress-bar" class="d-flex justify-content-center"
+          >Leadership Skills</label
+        >
+        <div
+          class="progress m-2"
+          role="progressbar"
+          aria-label="Animated striped example 20px high"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            style="width: 85%"
+          ></div>
+        </div>
+        <label for="progress-bar" class="d-flex justify-content-center"
+          >Interpersonal Skills</label
+        >
+        <div
+          class="progress m-2"
+          role="progressbar"
+          aria-label="Animated striped example 20px high"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            style="width: 70%"
+          ></div>
+        </div>
+        <label for="progress-bar" class="d-flex justify-content-center"
+          >Analytical Skills</label
+        >
+        <div
+          class="progress m-2"
+          role="progressbar"
+          aria-label="Animated striped example 20px high"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            style="width: 80%"
+          ></div>
+        </div>
+        <label for="progress-bar" class="d-flex justify-content-center"
+          >Communication Skills</label
+        >
+        <div
+          class="progress m-2"
+          role="progressbar"
+          aria-label="Animated striped example 20px high"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            style="width: 91%"
+          ></div>
+        </div>
+        <label for="progress-bar" class="d-flex justify-content-center"
+          >Organizational Skills</label
+        >
+        <div
+          class="progress m-2"
+          role="progressbar"
+          aria-label="Animated striped example 20px high"
+          aria-valuenow="75"
+          aria-valuemin="0"
+          aria-valuemax="100"
+        >
+          <div
+            class="progress-bar progress-bar-striped progress-bar-animated"
+            style="width: 69%"
+          ></div>
         </div>
       </div>
     </div>
@@ -78,7 +153,12 @@ export default {
 </script>
 
 <style scoped>
-ul {
-  list-style: none;
+
+.skillsSection {
+    margin-bottom: 20px;
+    margin-top: 20px !important;
+}
+.skills {
+    width: 90%;
 }
 </style>
