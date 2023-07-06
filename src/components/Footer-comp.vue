@@ -46,7 +46,7 @@ footer {
   color: #ede4e0;
   display: flex;
   justify-content: space-between;
-  margin-top: 10px;
+  margin-top: 20px;
   padding: 10px;
 }
 

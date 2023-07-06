@@ -42,6 +42,7 @@
 <style scoped>
 nav {
   background-color: #3c2a21 !important;
+  margin-bottom: 20px;
 }
 .navImage {
   height: 60px;
