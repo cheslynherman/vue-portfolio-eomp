@@ -192,6 +192,54 @@ body {
   font-family: "Chakra Petch", sans-serif;
   color: #3C2A21;
 }
+.card {
+  width: 40vh;
+  height: 40vh;
+  background-color: #3c2a21 !important;
+  color: #ede4e0 !important;
+  border-radius: 20px !important;
+  border: 0px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  perspective: 1000px;
+  box-shadow: 0 0 0 5px #ffffff80;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card img {
+  height: 50vh;
+  border-radius: 20px !important;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2);
+}
+.card__content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  align-items: center !important;
+  height: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+  border-radius: 20px !important;
+  background-color: #3c2a21;
+  transform: rotateX(-90deg);
+  transform-origin: bottom;
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.card:hover .card__content {
+  transform: rotateX(0deg);
+}
+.card:hover img {
+  scale: 0;
+}
+.card__description {
+  font-size: 14px;
+}
+
 .skillsSection {
   margin-bottom: 20px;
   margin-top: 20px !important;
