@@ -1,7 +1,7 @@
 <template>
   <NavBarComp />
   <router-view />
-  <FooterComp/>
+  <FooterComp />
 </template>
 
 <script>
@@ -10,7 +10,7 @@ import FooterComp from "@/components/Footer-comp.vue";
 export default {
   components: {
     NavBarComp,
-    FooterComp
+    FooterComp,
   },
 };
 </script>
@@ -18,13 +18,15 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500&display=swap");
 #app {
-  font-family: 'Chakra Petch', sans-serif;
+  font-family: "Chakra Petch", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
 }
-
+::-webkit-scrollbar {
+  display: none;
+}
 body {
   background-color: #ede4e0;
 }

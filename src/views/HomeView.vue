@@ -8,7 +8,7 @@
         <p>An aspiring web developer, web designer and frontend developer</p>
       </div>
       <div class="linkBtn">
-        <button>Have A Look At My Work</button>
+        <router-link class="homeButton" to="/project">Have A Look At My Work</router-link>
       </div>
     </div>
   </div>
@@ -61,7 +61,7 @@ p {
   }
 }
 
-button {
+.homeButton {
   color: #ede4e0;
   background: #3c2a21;
   border: 0px;
@@ -73,12 +73,16 @@ button {
     transition: all 0.2s ease-in;
 }
 
-button:hover {
+.homeButton:hover {
   color: #3c2a21;
       background: #ede4e0;
     box-shadow: 0 0 30px 5px #3c2a21;
     -webkit-transition: all 0.2s ease-out;
     -moz-transition: all 0.2s ease-out;
     transition: all 0.2s ease-out;
+}
+
+a {
+  text-decoration: none;
 }
 </style>

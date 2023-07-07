@@ -14,10 +14,10 @@
     </div>
 
     <div class="container fluid d-flex justify-content-center">
-      <div class="col-4">
-        <div><h3>Education</h3></div>
+      <div class="education col-4 mx-auto">
+        <div><h3 class="text-center">Education</h3></div>
         <div v-for="educ in education" :key="educ.id" :educ="educ">
-          <div class="card">
+          <div class="card m-4 mx-auto">
             <img :src="educ.image_url" :alt="educ.institution" />
             <div class="card__content">
               <h3>{{ educ.institution }}</h3>
@@ -28,17 +28,17 @@
           </div>
         </div>
       </div>
-      <div class="col-4">
+      <div class="experience col-4 mx-auto">
         <div><h3>Experience</h3></div>
         <div v-for="exp in experience" :key="exp.id" :exp="exp">
-          <div class="card">
+          <div class="card m-4 mx-auto">
             <img :src="exp.image_url" :alt="exp.company" />
             <div class="card__content">
               <h3>{{ exp.company }}</h3>
               <br />
               <p class="card__description">Duration: {{ exp.duration }}</p>
-              <p>Position: {{ exp.position }}</p>
-              <p>Duties: {{ exp.duties }}</p>
+              <p class="card_text">Position: {{ exp.position }}</p>
+              <p class="card_text">Duties: {{ exp.duties }}</p>
             </div>
           </div>
         </div>
@@ -131,38 +131,43 @@
           ></div>
         </div>
       </div>
-      <div class="mt-3">
+      <div class="mt-3 container-fluid">
         <div><h3>Technical Skils</h3></div>
         <div>
           <img
-            class="skill-imgs"
+            class="skill-imgs img-fluid"
             src="https://i.postimg.cc/KYk7cQ03/icons8-css-150.png"
             alt="CSS"
           />
           <img
-            class="skill-imgs"
+            class="skill-imgs img-fluid"
             src="https://i.postimg.cc/prxKZvRK/icons8-github-150-2.png"
             alt="GitHub"
           />
           <img
-            class="skill-imgs"
+            class="skill-imgs img-fluid"
             src="https://i.postimg.cc/fbGcVXP2/icons8-bootstrap-a-free-and-open-source-css-framework-96.png"
             alt="Bootstrap"
           />
           <img
-            class="skill-imgs"
+            class="skill-imgs img-fluid"
             src="https://i.postimg.cc/vB5WfTFQ/icons8-javascript-128.png"
             alt="JavaScript"
           />
           <img
-            class="skill-imgs"
+            class="skill-imgs img-fluid"
             src="https://i.postimg.cc/fRbjpMXK/icons8-vue-js-an-open-source-javascript-framework-for-building-user-interfaces-and-single-page-appli.png"
             alt="Vue"
           />
           <img
-            class="skill-imgs"
+            class="skill-imgs img-fluid"
             src="https://i.postimg.cc/Tw93zLZN/icons8-html-150-2.png"
             alt="HTML"
+          />
+          <img
+            class="skill-imgs img-fluid"
+            src="https://i.postimg.cc/bw4VGTVn/icons8-figma-150.png"
+            alt="Figma"
           />
         </div>
       </div>
@@ -192,6 +197,7 @@ body {
   font-family: "Chakra Petch", sans-serif;
   color: #3C2A21;
 }
+
 .card {
   width: 40vh;
   height: 40vh;
@@ -240,6 +246,10 @@ body {
   font-size: 14px;
 }
 
+.card_text {
+  font-size: 10px;
+}
+
 .skillsSection {
   margin-bottom: 20px;
   margin-top: 20px !important;
@@ -249,7 +259,7 @@ body {
 }
 
 .skill-imgs {
-  height: 150px;
+  height: 100px;
   margin: 20px;
 }
 .progress-bar {
