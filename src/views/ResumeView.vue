@@ -11,12 +11,25 @@
       <p>Email: cheslynherman1169@gmail.com</p>
       <p>Languages: English and Afrikaans</p>
       <p>Willing to Relocate: Yes</p>
+      <a
+        href="https://www.linkedin.com/in/cheslyn-herman-2449b9275/"
+        target="blank"
+        ><button>LinkedIn</button></a
+      >
+      <a href="https://github.com/cheslynherman" target="blank"
+        ><button>GitHub</button></a
+      >
     </div>
 
-    <div class="container fluid d-flex justify-content-center">
-      <div class="education col-4 mx-auto">
+    <div class="educ-exp container d-flex justify-content-center">
+      <div class="mx-auto">
         <div><h3 class="text-center">Education</h3></div>
-        <div v-for="educ in education" :key="educ.id" :educ="educ">
+        <div
+          v-for="educ in education"
+          :key="educ.id"
+          :educ="educ"
+          class="education"
+        >
           <div class="card m-4 mx-auto">
             <img :src="educ.image_url" :alt="educ.institution" />
             <div class="card__content">
@@ -28,9 +41,14 @@
           </div>
         </div>
       </div>
-      <div class="experience col-4 mx-auto">
+      <div class="mx-auto">
         <div><h3>Experience</h3></div>
-        <div v-for="exp in experience" :key="exp.id" :exp="exp">
+        <div
+          v-for="exp in experience"
+          :key="exp.id"
+          :exp="exp"
+          class="experience"
+        >
           <div class="card m-4 mx-auto">
             <img :src="exp.image_url" :alt="exp.company" />
             <div class="card__content">
@@ -195,9 +213,28 @@ export default {
 <style scoped>
 body {
   font-family: "Chakra Petch", sans-serif;
-  color: #3C2A21;
+  color: #3c2a21;
 }
-
+button {
+  color: #3c2a21;
+  border: 2px solid #3c2a21;
+  background: #ede4e0;
+  padding: 5px 8px 5px 8px;
+  border-radius: 15px;
+  box-shadow: 0 0 0 0 transparent;
+  -webkit-transition: all 0.2s ease-in;
+  -moz-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  margin: 15px;
+}
+button:hover {
+  color: #ede4e0;
+  background: #3c2a21;
+  box-shadow: 0 0 30px 5px #3c2a21;
+  -webkit-transition: all 0.2s ease-out;
+  -moz-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
 .card {
   width: 40vh;
   height: 40vh;
@@ -263,7 +300,16 @@ body {
   margin: 20px;
 }
 .progress-bar {
-    background-color: #3C2A21;
-    color: #3C2A21 !important;
+  background-color: #3c2a21;
+  color: #3c2a21 !important;
+}
+
+@media only screen and (max-width: 700px) {
+  .educ-exp {
+    flex-direction: column !important;
+  }
+  .education, .experience {
+   width: 90%;
+  }
 }
 </style>

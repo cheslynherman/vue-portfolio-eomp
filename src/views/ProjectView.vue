@@ -77,27 +77,7 @@
       </div>
     </div>
   </div>
-  <div v-else>Just hang on...</div>
-  <!-- <div
-    v-for="testimonial in testimonials"
-    :key="testimonial.id"
-    :testimonial="testimonial"
-    class="display d-flex justify-content-center"
-  >
-    <div class="card m-3" style="width: 18rem">
-      <div class="card-body">
-        <h5 class="card-title">{{ testimonial.name }}</h5>
-        <p class="card-text">
-          {{ testimonial.text }}
-        </p>
-      </div>
-      <img
-        :src="testimonial.image_url"
-        class="card-img-bottom"
-        :alt="testimonial.name"
-      />
-    </div>
-  </div> -->
+  <div v-else>You Got This</div>
 </template>
 
 <script>
@@ -208,5 +188,23 @@ a {
   -webkit-transition: all 0.2s ease-out;
   -moz-transition: all 0.2s ease-out;
   transition: all 0.2s ease-out;
+}
+
+@media screen and (max-width: 700px){
+  .imgs {
+    height: 55vh !important;
+  }
+  .box {
+    height: 90vh;
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 300px) {
+  .imgs {
+    height: 38vh !important;
+  }
 }
 </style>

@@ -236,4 +236,10 @@ body {
   color: #3c2a21;
   margin: 20px;
 }
+
+@media only screen and (max-width: 700px){
+  .card {
+    margin: 20px;
+  }
+}
 </style>
