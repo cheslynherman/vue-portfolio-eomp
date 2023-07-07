@@ -28,7 +28,7 @@
             >About</router-link
           >
           <router-link to="/resume" class="navButtons"
-            >Resume</router-link
+            >Resum&eacute;</router-link
           >
           <router-link to="/contact" class="navButtons"
             >Contact</router-link
